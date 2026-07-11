@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О проекте CosmoSpace</title>
+  <style>
+    :root {
+      --bg: #050510;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --text: #ffffff;
+      --accent: #4db9ff;
+      --accent-hover: #7dd8ff;
+      --light: #f3f4f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(5,5,16,0.9);
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-hover); }
+
+    #about-hero {
+      padding: 80px 0;
+      text-align: center;
+    }
+    #about-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+    #about-hero p {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #features {
+      padding: 60px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 48px;
+      color: var(--text);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(77,185,255,0.2);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    #tech-stack {
+      padding: 60px 0;
+      background: var(--light);
+      color: #111;
+    }
+    #tech-stack .section-title { color: #111; }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .tech-tag {
+      background: #e5e7eb;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 16px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      #about-hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">CosmoSpace</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="planets.html">Планеты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about-hero">
+    <div class="container">
+      <h1>О проекте CosmoSpace</h1>
+      <p>CosmoSpace — это образовательный сайт о космосе, где мы простым языком рассказываем о планетах, звёздах и космических миссиях.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title">Что мы делаем</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Простые объяснения</h3>
+          <p style="margin-top:12px; color:rgba(255,255,255,0.8)">Разбираем сложные темы так, чтобы было понятно даже школьникам.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🛰️</div>
+          <h3>Актуальные данные</h3>
+          <p style="margin-top:12px; color:rgba(255,255,255,0.8)">Используем проверенные источники и регулярно обновляем информацию.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Красивая подача</h3>
+          <p style="margin-top:12px; color:rgba(255,255,255,0.8)">Делаем дизайн, который вдохновляет изучать космос.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 CosmoSpace. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

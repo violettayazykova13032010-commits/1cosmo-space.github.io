@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Планеты Солнечной системы</title>
+  <style>
+    :root {
+      --bg: #050510;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --text: #ffffff;
+      --accent: #4db9ff;
+      --accent-hover: #7dd8ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(5,5,16,0.9);
+      backdrop-filter: blur(12px);
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-hover); }
+
+    #planets-grid {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .planet-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .planet-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(77,185,255,0.2);
+    }
+    .planet-img {
+      width: 100%;
+      height: 200px;
+      background: #1a1a2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 2rem;
+    }
+    .planet-body { padding: 20px; }
+    .planet-name {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .planet-fact {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 12px;
+    }
+    .planet-link {
+      color: var(--accent);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .planet-link:hover { text-decoration: underline; }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 16px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">CosmoSpace</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="planets.html">Планеты</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title" style="font-size:2.2rem; margin:60px 0 32px;">Планеты Солнечной системы</h2>
+    <div id="planets-grid">
+      <!-- Меркурий -->
+      <article class="planet-card">
+        <div class="planet-img">🟤</div>
+        <div class="planet-body">
+          <div class="planet-name">Меркурий</div>
+          <div class="planet-fact">Самая близкая к Солнцу планета. Год длится 88 земных суток.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Венера -->
+      <article class="planet-card">
+        <div class="planet-img">🟠</div>
+        <div class="planet-body">
+          <div class="planet-name">Венера</div>
+          <div class="planet-fact">Атмосфера из углекислого газа, давление в 92 раза выше земного.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Земля -->
+      <article class="planet-card">
+        <div class="planet-img">🌍</div>
+        <div class="planet-body">
+          <div class="planet-name">Земля</div>
+          <div class="planet-fact">Единственная известная планета с жидкой водой и жизнью.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Марс -->
+      <article class="planet-card">
+        <div class="planet-img">🔴</div>
+        <div class="planet-body">
+          <div class="planet-name">Марс</div>
+          <div class="planet-fact">Красная планета с тонкой атмосферой. Есть полярные шапки и вулкан Олимп — крупнейший в Солнечной системе.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Юпитер -->
+      <article class="planet-card">
+        <div class="planet-img">🟡</div>
+        <div class="planet-body">
+          <div class="planet-name">Юпитер</div>
+          <div class="planet-fact">Крупнейшая планета системы. Известен Большим Красным Пятном — гигантским штормом.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Сатурн -->
+      <article class="planet-card">
+        <div class="planet-img">🟨</div>
+        <div class="planet-body">
+          <div class="planet-name">Сатурн</div>
+          <div class="planet-fact">Знаменит кольцами из космического мусора и пыли. Имеет более 80 спутников.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Уран -->
+      <article class="planet-card">
+        <div class="planet-img">🔵</div>
+        <div class="planet-body">
+          <div class="planet-name">Уран</div>
+          <div class="planet-fact">Вращается «на боку». Холодная планета с системой колец и спутниками.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+      <!-- Нептун -->
+      <article class="planet-card">
+        <div class="planet-img">🌌</div>
+        <div class="planet-body">
+          <div class="planet-name">Нептун</div>
+          <div class="planet-fact">Самый дальний газовый гигант. Известен сильными ветрами и штормами.</div>
+          <a href="#" class="planet-link">Подробнее →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 CosmoSpace. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
